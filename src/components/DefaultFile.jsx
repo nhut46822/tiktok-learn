@@ -6,10 +6,10 @@ import classNames from 'classnames/bind';
 
 // const cx = classNames.bind(styles);
 
-function Default(props) {
-    return <div>Default</div>;
+function Default1(props) {
+    return <div>Default1</div>;
 }
 
-Default.propTypes = {};
+Default1.propTypes = {};
 
-export default Default;
+export default Default1;
