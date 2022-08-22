@@ -31,8 +31,6 @@ function App() {
                             />
                         );
                     })}
-                    {/* <Route path="/" element={<Home />} />
-                    <Route path="/following" element={<Following />} /> */}
                 </Routes>
             </div>
         </Router>
