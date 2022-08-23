@@ -10,6 +10,9 @@ function Wrapper({ children, className }) {
     return <div className={cx('wrapper', className)}>{children}</div>;
 }
 
-Wrapper.propTypes = {};
+Wrapper.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+};
 
 export default Wrapper;

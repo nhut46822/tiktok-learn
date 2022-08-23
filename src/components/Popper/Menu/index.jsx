@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 const defaultFc = () => {};
 
 function Menu({ children, items = [], hideOnClick = false, onChange = defaultFc }) {
-    const [history, setHistory] = useState([{ data: items }]); //21:20
+    const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
     const renderItems = () => {
@@ -48,7 +48,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFc 
                     <PopperWrapper className={cx('menu-popper')}>
                         {history.length > 1 && (
                             <Header
-                                title="Language"
+                                title={current.title}
                                 onBack={() => {
                                     setHistory((prev) => prev.slice(0, prev.length - 1));
                                 }}
@@ -65,6 +65,11 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFc 
     );
 }
 
-Menu.propTypes = {};
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    hideOnClick: PropTypes.bool,
+    onChange: PropTypes.func,
+};
 
 export default Menu;

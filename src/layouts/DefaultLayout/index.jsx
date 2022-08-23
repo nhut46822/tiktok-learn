@@ -21,6 +21,8 @@ function DefaultLayout({ children }) {
     );
 }
 
-DefaultLayout.propTypes = {};
+DefaultLayout.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default DefaultLayout;
